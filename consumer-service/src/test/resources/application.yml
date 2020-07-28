@@ -1,0 +1,8 @@
+amq:
+  username: admin
+  password: admin
+  port: 61616
+  host: localhost
+
+message-channels:
+  order-created: order-created

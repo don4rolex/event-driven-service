@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.andrew.messagedefinition;
+
+import "address.proto";
+
+option java_package = "com.andrew.messagedefinition";
+option java_multiple_files = true;
+
+message Order {
+  string itemId = 1;
+  int64 quantity = 2;
+  Address shippingAddress = 3;
+}
