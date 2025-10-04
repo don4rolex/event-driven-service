@@ -4,7 +4,7 @@ amq:
   port: 61616
   host: localhost
 
-message-channels:
+event-queues:
   order-created: order-created
 
 server:

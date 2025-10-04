@@ -6,8 +6,8 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.1.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <version>4.0.0-M3</version>
+    <relativePath/>
   </parent>
 
   <groupId>com.andrew</groupId>
@@ -17,8 +17,12 @@
   <description>Demo project for event-driven service with Spring Boot</description>
 
   <properties>
-    <java.version>14</java.version>
-    <camel.version>3.4.1</camel.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+
+    <camel.version>4.14.1</camel.version>
+    <protobuf-java.version>4.29.2</protobuf-java.version>
+    <event-definition.version>1.0-SNAPSHOT</event-definition.version>
   </properties>
 
   <dependencies>
@@ -62,11 +66,16 @@
       <version>${camel.version}</version>
     </dependency>
 
-    <!-- ProtoBuf Message Definition -->
+    <!-- ProtoBuf Definition -->
     <dependency>
       <groupId>com.andrew</groupId>
-      <artifactId>message-definition</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <artifactId>event-definition</artifactId>
+      <version>${event-definition.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>${protobuf-java.version}</version>
     </dependency>
   </dependencies>
 
